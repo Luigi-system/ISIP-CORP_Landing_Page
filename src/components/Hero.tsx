@@ -28,7 +28,7 @@ const Hero = () => {
           >
             <h1 className="text-4xl md:text-7xl font-black text-white leading-none mb-8 tracking-tighter max-w-4xl">
               Química Especializada en la <br />
-              <span className="text-isip-cyan italic">Optimización</span> de Procesos
+              <span className="text-isip-cyan">Optimización</span> de Procesos
             </h1>
 
             <p className="text-base md:text-xl text-white/90 mb-10 leading-relaxed max-w-2xl font-light">
@@ -45,23 +45,6 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Scroll Indicator (Mouse) */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 hidden md:block z-20">
-        <div className="w-5 h-9 border-2 border-white/30 rounded-full flex justify-center p-1">
-          <motion.div
-            animate={{
-              y: [0, 10, 0],
-              opacity: [1, 0, 1],
-            }}
-            transition={{
-              duration: 1.5,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-            className="w-1 h-1 bg-isip-cyan rounded-full"
-          />
-        </div>
-      </div>
     </div>
   );
 };

@@ -1,172 +1,151 @@
 import { motion } from 'framer-motion';
 import { Droplets, Pickaxe, Building2, FileText, FlaskConical, Fuel, ChevronRight } from 'lucide-react';
+import unidadesBg from '../assets/unidades.png';
+import papelypulpaBg from '../assets/papelypulpa.png';
+import tratamientoBg from '../assets/tratamiento.png';
+import mineriaBg from '../assets/mineria.png';
+import construccionBg from '../assets/construccion.png';
+import gasBg from '../assets/gas.png';
+import alimentariaBg from '../assets/alimentaria.png';
+import customSolutionBg from '../assets/custom_solution_bg.png';
 
 const UnitsPage = () => {
   const units = [
     {
       icon: Droplets,
-      title: "Tratamiento de Agua Industrial",
-      desc: "Nuestra unidad core especializada en la gestión del recurso hídrico mediante química avanzada.",
-      details: [
-        "Coagulantes y Floculantes de alto rendimiento.",
-        "Biocidas para control microbiológico.",
-        "Inhibidores de corrosión e incrustación.",
-        "Optimización de clarificación y sedimentación.",
-        "Soluciones para reutilización de agua industrial."
-      ],
-      image: "https://images.unsplash.com/photo-1548013146-72479768bbaa?auto=format&fit=crop&q=80"
+      title: "Papel & Pulpa",
+      desc: "Desarrollamos soluciones químicas especializadas para la industria de pulpa y papel, enfocadas en mejorar la eficiencia de producción, optimizar la calidad del producto final y reducir el impacto operativo en los procesos industriales. Nuestro portafolio incluye productos para control microbiológico, retención, drenaje, blanqueamiento, tratamiento de efluentes y optimización de sistemas de caldera, adaptándonos a las necesidades específicas de cada planta.",
+      bgImage: papelypulpaBg
     },
     {
       icon: Pickaxe,
-      title: "Minería & Metalurgia",
-      desc: "Optimizamos la recuperación de metales mediante procesos químicos eficientes.",
-      details: [
-        "Reactivos para flotación de minerales.",
-        "Colectores y espumantes especializados.",
-        "Modificadores de pH y activadores.",
-        "Control de polvos y efluentes mineros."
-      ],
-      image: "https://images.unsplash.com/photo-1578319439584-104c94d37305?auto=format&fit=crop&q=80"
+      title: "Tratamiento de Agua",
+      desc: "Brindamos soluciones integrales para el tratamiento de agua industrial y residual, orientadas a maximizar la eficiencia de los procesos, garantizar la calidad del recurso hídrico y contribuir al reúso sostenible del agua. Trabajamos con tecnologías y productos químicos especializados para control de incrustaciones, corrosión, clarificación, sedimentación y tratamiento físico-químico en distintos sectores industriales.",
+      bgImage: tratamientoBg
     },
     {
       icon: Fuel,
-      title: "Petróleo & Gas",
-      desc: "Soluciones químicas para toda la cadena de valor, desde extracción hasta refinación.",
-      details: [
-        "Tratamiento químico en pozos de extracción.",
-        "Desemulsificantes y rompedores de lodos.",
-        "Inhibidores de parafinas y asfaltenos.",
-        "Limpieza química institucional."
-      ],
-      image: "https://images.unsplash.com/photo-1544211100-244e6b18973b?auto=format&fit=crop&q=80"
+      title: "Minería",
+      desc: "Ofrecemos soluciones químicas de alto desempeño para procesos mineros, contribuyendo a mejorar la recuperación de minerales, optimizar la flotación y garantizar la estabilidad operativa de las plantas. Nuestra experiencia nos permite desarrollar productos adaptados a las exigencias de la industria minera, incluyendo reactivos, espumantes, floculantes y tratamientos especializados para agua de proceso.",
+      bgImage: mineriaBg
     },
     {
       icon: Building2,
       title: "Construcción",
-      desc: "Aditivos técnicos que mejoran las propiedades de los materiales de construcción.",
-      details: [
-        "Superplastificantes para concreto de alta resistencia.",
-        "Acelerantes y retardadores de fraguado.",
-        "Impermeabilizantes de masa y superficie.",
-        "Curadores y desmoldantes químicos."
-      ],
-      image: "https://images.unsplash.com/photo-1541888941297-8591cd6d622d?auto=format&fit=crop&q=80"
+      desc: "Desarrollamos aditivos y soluciones químicas orientadas a optimizar procesos constructivos, mejorar el rendimiento de los materiales y aumentar la eficiencia en obra. Nuestros productos están diseñados para aportar mayor resistencia, trabajabilidad y durabilidad en aplicaciones de construcción, contribuyendo a reducir tiempos de ejecución y costos operativos.",
+      bgImage: construccionBg
     },
     {
       icon: FileText,
-      title: "Papel & Pulpa",
-      desc: "Química de procesos para optimizar la calidad y el rendimiento en la fabricación de papel.",
-      details: [
-        "Auxiliares de retención y drenaje.",
-        "Resinas de resistencia en seco y húmedo.",
-        "Control de depósitos y pitch.",
-        "Agentes blanqueadores y colorantes."
-      ],
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80"
+      title: "Gas y Petróleo",
+      desc: "Proveemos productos químicos especializados para operaciones de extracción, refinación y tratamiento en la industria de gas y petróleo. Nuestras soluciones están enfocadas en el control de corrosión, inhibición de incrustaciones, tratamiento de efluentes y optimización de procesos críticos, permitiendo mejorar la seguridad, eficiencia y continuidad operativa en cada etapa del proceso industrial.",
+      bgImage: gasBg
     },
     {
       icon: FlaskConical,
-      title: "Procesos Térmicos & Especialidades",
-      desc: "Cuidado de sistemas críticos como calderas y circuitos de enfriamiento.",
-      details: [
-        "Tratamiento para calderas y sistemas de vapor.",
-        "Prevención de incrustaciones en intercambiadores.",
-        "Tratamiento de efluentes complejos.",
-        "Desarrollos químicos a medida."
-      ],
-      image: "https://images.unsplash.com/photo-1532187863486-abf91ad9b0c0?auto=format&fit=crop&q=80"
+      title: "Industria Alimentaria",
+      desc: "Ofrecemos soluciones químicas y tratamientos especializados para procesos de la industria alimentaria, priorizando la eficiencia operativa, la calidad del agua y el cumplimiento de estándares industriales. Nuestros productos están diseñados para aplicaciones en tratamiento de agua, control de procesos, sistemas de vapor y optimización de operaciones, asegurando un desempeño confiable y sostenible en entornos de producción alimentaria.",
+      bgImage: alimentariaBg
     }
   ];
 
   return (
     <div className="bg-white">
       {/* Header */}
-      <section className="bg-isip-light py-32 overflow-hidden relative">
-        <div className="absolute top-0 right-0 w-1/3 h-full bg-isip-cyan/5 -skew-x-12 transform translate-x-20"></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <section className="relative h-[70vh] flex items-center justify-center bg-isip-dark overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img
+            src={unidadesBg}
+            alt="Unidades de Negocio Background"
+            className="w-full h-full object-cover opacity-40 scale-105 transition-transform duration-[10s] animate-slow-zoom"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-isip-dark/90 via-isip-dark/10 to-isip-dark"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.4)_100%)]"></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center w-full">
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            className="max-w-3xl"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="max-w-4xl mx-auto"
           >
-            <h2 className="text-isip-cyan font-bold tracking-widest uppercase text-sm mb-4">Portafolio</h2>
-            <h1 className="text-6xl md:text-8xl font-black text-isip-dark mb-8 tracking-tighter uppercase leading-none">
+            <h1 className="text-6xl md:text-8xl font-black text-white mb-8 tracking-tighter uppercase leading-none">
               Unidades de <br /> <span className="text-isip-cyan">Negocio</span>
             </h1>
-            <p className="text-xl text-gray-500 font-light leading-relaxed">
+            <p className="text-xl md:text-2xl text-white/70 max-w-3xl mx-auto font-light leading-relaxed">
               Explora nuestra gama de soluciones químicas diseñadas para elevar la eficiencia operativa de los sectores más exigentes de la industria.
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Units Grid */}
-      <section className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="space-y-32">
-          {units.map((unit, idx) => (
-            <motion.div 
-              key={idx}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className={`flex flex-col lg:items-center gap-16 ${idx % 2 !== 0 ? 'lg:flex-row-reverse' : 'lg:flex-row'}`}
-            >
-              <div className="lg:w-1/2">
-                <div className="relative group overflow-hidden rounded-[60px] shadow-2xl">
-                  <img 
-                    src={unit.image} 
-                    alt={unit.title} 
-                    className="w-full h-[500px] object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-isip-dark/20 group-hover:bg-isip-dark/0 transition-colors duration-500"></div>
-                </div>
-              </div>
+      {/* Units Sections */}
+      {units.map((unit, idx) => (
+        <section
+          key={idx}
+          id={unit.title.toLowerCase().replace(/ & /g, '-').replace(/ y /g, '-').replace(/ /g, '-').normalize("NFD").replace(/[\u0300-\u036f]/g, "")}
+          className={`relative min-h-[85vh] flex items-center overflow-hidden py-32 ${unit.bgImage ? 'bg-isip-dark text-white' : idx % 2 !== 0 ? 'bg-isip-light/30' : 'bg-white'}`}
+        >
+          {unit.bgImage && (
+            <div className="absolute inset-0 z-0">
+              <img
+                src={unit.bgImage}
+                alt={unit.title}
+                className="w-full h-full object-cover opacity-50 scale-105"
+              />
+              <div className={`absolute inset-0 bg-gradient-to-r ${idx % 2 === 0 ? 'from-transparent via-isip-dark/50 to-isip-dark' : 'from-isip-dark via-isip-dark/50 to-transparent'}`}></div>
+            </div>
+          )}
 
-              <div className="lg:w-1/2 space-y-8">
-                <div className="w-20 h-20 bg-isip-light rounded-3xl flex items-center justify-center text-isip-cyan">
-                  <unit.icon size={40} />
-                </div>
-                <h3 className="text-4xl font-black text-isip-dark uppercase tracking-tighter leading-tight">
-                  {unit.title}
-                </h3>
-                <p className="text-gray-500 text-lg leading-relaxed font-light">
-                  {unit.desc}
-                </p>
-                <ul className="space-y-4">
-                  {unit.details.map((detail, i) => (
-                    <li key={i} className="flex items-center text-gray-600 font-medium group">
-                      <div className="w-8 h-8 rounded-full bg-isip-cyan/10 flex items-center justify-center text-isip-cyan mr-4 transition-colors group-hover:bg-isip-cyan group-hover:text-white">
-                        <ChevronRight size={16} />
-                      </div>
-                      {detail}
-                    </li>
-                  ))}
-                </ul>
-                <motion.button 
-                  whileHover={{ x: 10 }}
-                  className="inline-flex items-center text-isip-cyan font-bold uppercase tracking-widest text-sm"
-                >
-                  Solicitar Ficha Técnica <ChevronRight className="ml-2" size={18} />
-                </motion.button>
-              </div>
+          <div className={`max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10 ${idx % 2 === 0 ? 'text-right' : 'text-left'}`}>
+            <motion.div
+              initial={{ opacity: 0, x: idx % 2 === 0 ? 50 : -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="space-y-6"
+            >
+              <h3 className={`text-4xl md:text-5xl font-black uppercase tracking-tighter leading-tight ${unit.bgImage ? 'text-white' : 'text-isip-dark'}`}>
+                {unit.title}
+              </h3>
+
+              <p className={`${unit.bgImage ? 'text-white/80' : 'text-gray-600'} text-lg md:text-xl leading-relaxed font-light max-w-3xl ${idx % 2 === 0 ? 'ml-auto' : 'mr-auto'}`}>
+                {unit.desc}
+              </p>
             </motion.div>
-          ))}
-        </div>
-      </section>
+          </div>
+        </section>
+      ))}
 
       {/* CTA Section */}
-      <section className="py-24 bg-isip-dark text-white text-center px-4">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-6xl font-black mb-8 uppercase tracking-tighter">¿Busca una solución <span className="text-isip-cyan">a medida</span>?</h2>
-          <p className="text-white/60 text-xl mb-12 font-light leading-relaxed">
-            Nuestra capacidad de formulación nos permite adaptar nuestros productos a las condiciones específicas de sus procesos industriales.
-          </p>
-          <a 
-            href="/contacto" 
-            className="bg-isip-cyan hover:bg-white hover:text-isip-dark text-white px-12 py-5 rounded-2xl font-black uppercase tracking-widest transition-all duration-500 inline-block shadow-2xl shadow-isip-cyan/20"
+      <section className="relative min-h-[85vh] flex items-center justify-center bg-isip-dark text-white text-center px-4 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img
+            src={customSolutionBg}
+            alt="Custom Solutions Background"
+            className="w-full h-full object-cover opacity-100 scale-105"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-isip-dark/90 via-isip-dark/60 to-isip-dark/90"></div>
+        </div>
+
+        <div className="max-w-4xl mx-auto relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
           >
-            Hable con un Especialista
-          </a>
+            <h2 className="text-4xl md:text-6xl font-black mb-8 uppercase tracking-tighter">¿Busca una solución <span className="text-isip-cyan">a medida</span>?</h2>
+            <p className="text-white/70 text-xl mb-12 font-light leading-relaxed">
+              Nuestra capacidad de formulación nos permite adaptar nuestros productos a las condiciones específicas de sus procesos industriales.
+            </p>
+            <a
+              href="/contacto"
+              className="bg-isip-cyan hover:bg-white hover:text-isip-dark text-white px-12 py-5 rounded-2xl font-black uppercase tracking-widest transition-all duration-500 inline-block shadow-2xl shadow-isip-cyan/20"
+            >
+              Hable con un Especialista
+            </a>
+          </motion.div>
         </div>
       </section>
     </div>

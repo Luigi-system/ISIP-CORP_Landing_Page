@@ -75,149 +75,141 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* Pillars Section - Updated with Panels Background */}
-      <section className="relative py-32 overflow-hidden">
+      {/* Pillars Section - Centered Vertically */}
+      <section className="relative py-32 overflow-hidden min-h-screen flex items-center">
         <div className="absolute inset-0 z-0">
           <img
             src={innovacionBg}
             alt="Pilares de Innovación"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-isip-dark/80 via-isip-dark/40 to-transparent"></div>
+          <div className="absolute inset-0 bg-isip-dark/60 backdrop-blur-[2px]"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-isip-dark/40 via-transparent to-isip-dark/40 opacity-30"></div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 h-full">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-center min-h-[800px]">
-            {/* Left Panel: Pillar 1 (Centered) */}
-            <div className="h-full flex flex-col justify-center">
-              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                className="group w-full"
-              >
-                <div className="bg-isip-dark/40 backdrop-blur-md p-10 rounded-[20px] border-t-2 border-isip-cyan/50 hover:border-isip-cyan transition-all duration-700 hover:bg-isip-dark/60 w-full min-h-[320px] flex flex-col justify-between group-hover:transform group-hover:scale-[1.02] shadow-2xl text-center">
-                  <div>
-                    <span className="text-isip-cyan/40 font-black text-5xl mb-6 block group-hover:text-isip-cyan transition-colors duration-500">01</span>
-                    <h4 className="text-xl font-black text-white mb-4 uppercase tracking-tight leading-tight">Innovación Tecnológica</h4>
-                    <p className="text-white/50 leading-relaxed font-light text-base border-t border-white/10 pt-4 group-hover:text-white/80 transition-colors">
-                      Desarrollamos formulaciones químicas de vanguardia adaptadas a las condiciones específicas de cada proceso.
-                    </p>
-                  </div>
-                  <div className="mt-6 overflow-hidden h-1 w-0 mx-auto bg-isip-cyan group-hover:w-full transition-all duration-700"></div>
-                </div>
-              </motion.div>
-            </div>
+        <div className="max-w-[95rem] mx-auto px-4 sm:px-6 lg:px-12 relative z-10 w-full flex flex-col items-center justify-center">
+          {/* Header Title Centered */}
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-24"
+          >
+            <h2 className="text-white font-black text-5xl md:text-7xl tracking-tighter uppercase mb-6 leading-none">
+              Nuestros Pilares <span className="text-isip-cyan text-shadow-lg">Fundamentales</span>
+            </h2>
+            <div className="w-24 h-2 bg-isip-cyan mx-auto mb-6"></div>
+            <p className="text-white/70 text-xl font-light leading-relaxed max-w-2xl mx-auto">
+              Valores que guían cada formulación y cada asesoría técnica que brindamos en el campo industrial.
+            </p>
+          </motion.div>
 
-            {/* Center Panel: Pillars 2 & 3 Stacked (Uniform sizes) */}
-            <div className="h-full flex flex-col justify-center space-y-8">
-              <motion.div
-                initial={{ opacity: 0, y: -30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="group w-full"
-              >
-                <div className="bg-isip-dark/40 backdrop-blur-md p-10 rounded-[20px] border-t-2 border-isip-cyan/50 hover:border-isip-cyan transition-all duration-700 hover:bg-isip-dark/60 w-full min-h-[320px] flex flex-col justify-between group-hover:transform group-hover:scale-[1.02] shadow-2xl text-center">
-                  <div>
-                    <span className="text-isip-cyan/40 font-black text-5xl mb-6 block group-hover:text-isip-cyan transition-colors duration-500">02</span>
-                    <h4 className="text-xl font-black text-white mb-4 uppercase tracking-tight leading-tight">Compromiso Técnico</h4>
-                    <p className="text-white/50 leading-relaxed font-light text-base border-t border-white/10 pt-4 group-hover:text-white/80 transition-colors">
-                      Garantizamos resultados operativos y sostenibilidad en cada intervención técnica.
-                    </p>
-                  </div>
-                  <div className="mt-6 overflow-hidden h-1 w-0 mx-auto bg-isip-cyan group-hover:w-full transition-all duration-700"></div>
+          {/* Pillars in a Row with Maximum Separation */}
+          <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-48 xl:gap-64">
+            {/* Pillar 01 - Shifted Down and Left */}
+            <motion.div
+              initial={{ opacity: 0, x: -50, y: 40 }}
+              whileInView={{ opacity: 1, x: 0, y: 20 }}
+              viewport={{ once: true }}
+              className="w-full md:translate-y-16 md:-translate-x-12 lg:-translate-x-24"
+            >
+              <div className="p-6 w-full min-h-[160px] flex flex-col justify-start text-center">
+                <div>
+                  <span className="text-isip-cyan font-black text-5xl mb-4 block leading-none">01</span>
+                  <h4 className="text-2xl font-black text-white mb-4 uppercase tracking-tight leading-tight">Innovación Tecnológica</h4>
+                  <p className="text-white/60 leading-relaxed font-light text-base pt-2">
+                    Desarrollamos formulaciones químicas de vanguardia adaptadas a las condiciones específicas de cada proceso.
+                  </p>
                 </div>
-              </motion.div>
+              </div>
+            </motion.div>
 
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="group w-full"
-              >
-                <div className="bg-isip-dark/40 backdrop-blur-md p-10 rounded-[20px] border-t-2 border-isip-cyan/50 hover:border-isip-cyan transition-all duration-700 hover:bg-isip-dark/60 w-full min-h-[320px] flex flex-col justify-between group-hover:transform group-hover:scale-[1.02] shadow-2xl text-center">
-                  <div>
-                    <span className="text-isip-cyan/40 font-black text-5xl mb-6 block group-hover:text-isip-cyan transition-colors duration-500">03</span>
-                    <h4 className="text-xl font-black text-white mb-4 uppercase tracking-tight leading-tight">Calidad Certificada</h4>
-                    <p className="text-white/50 leading-relaxed font-light text-base border-t border-white/10 pt-4 group-hover:text-white/80 transition-colors">
-                      Rigurosos estándares de fabricación que aseguran seguridad en el manejo químico industrial.
-                    </p>
-                  </div>
-                  <div className="mt-6 overflow-hidden h-1 w-0 mx-auto bg-isip-cyan group-hover:w-full transition-all duration-700"></div>
+            {/* Pillar 02 - Central and High */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="w-full"
+            >
+              <div className="p-6 w-full min-h-[160px] flex flex-col justify-start text-center">
+                <div>
+                  <span className="text-isip-cyan font-black text-5xl mb-4 block leading-none">02</span>
+                  <h4 className="text-2xl font-black text-white mb-4 uppercase tracking-tight leading-tight">Compromiso Técnico</h4>
+                  <p className="text-white/60 leading-relaxed font-light text-base pt-2">
+                    Garantizamos resultados operativos y sostenibilidad en cada intervención técnica.
+                  </p>
                 </div>
-              </motion.div>
-            </div>
+              </div>
+            </motion.div>
 
-            {/* Right Panel: Main Titles */}
-            <div className="h-full flex flex-col justify-center items-center text-center md:pl-20">
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                className="max-w-sm"
-              >
-                <h2 className="text-white font-black text-4xl md:text-5xl tracking-tighter uppercase mb-6 leading-tight text-center">
-                  Nuestros Pilares <span className="text-isip-cyan text-shadow-lg">Fundamentales</span>
-                </h2>
-                <div className="w-20 h-2 bg-isip-cyan mx-auto mb-6"></div>
-                <p className="text-white/70 text-lg font-light leading-relaxed text-center">
-                  Valores que guían cada formulación y cada asesoría técnica que brindamos en el campo industrial.
-                </p>
-              </motion.div>
-            </div>
+            {/* Pillar 03 - Shifted Down and Right */}
+            <motion.div
+              initial={{ opacity: 0, x: 50, y: 40 }}
+              whileInView={{ opacity: 1, x: 0, y: 20 }}
+              viewport={{ once: true }}
+              className="w-full md:translate-y-16 md:translate-x-12 lg:translate-x-24"
+            >
+              <div className="p-6 w-full min-h-[160px] flex flex-col justify-start text-center">
+                <div>
+                  <span className="text-isip-cyan font-black text-5xl mb-4 block leading-none">03</span>
+                  <h4 className="text-2xl font-black text-white mb-4 uppercase tracking-tight leading-tight">Calidad Certificada</h4>
+                  <p className="text-white/60 leading-relaxed font-light text-base pt-2">
+                    Rigurosos estándares de fabricación que aseguran seguridad en el manejo químico industrial.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Mission & Vision Section - Updated with Background Panels */}
-      <section className="relative py-48 overflow-hidden">
+      {/* Mission & Vision Section - Text Floating */}
+      <section className="relative py-48 overflow-hidden min-h-screen flex items-center">
         <div className="absolute inset-0 z-0">
           <img
             src={misionBg}
             alt="Misión y Visión ISIP"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-isip-dark/50 backdrop-blur-[1px]"></div>
+          <div className="absolute inset-0 bg-isip-dark/75 backdrop-blur-[2px]"></div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24">
+        <div className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-12 relative z-10 w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-32 lg:gap-64">
             {/* Misión */}
             <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="bg-isip-dark/80 backdrop-blur-xl p-12 md:p-20 rounded-[60px] border border-white/10 shadow-2xl group hover:border-isip-cyan/30 transition-all duration-500"
+              className="text-center max-w-xl mx-auto"
             >
-              <div className="flex items-center space-x-6 mb-10">
-                <div className="w-16 h-16 bg-isip-cyan/20 rounded-2xl flex items-center justify-center text-isip-cyan">
-                  <Target size={36} />
-                </div>
-                <h3 className="text-4xl font-black text-white uppercase tracking-tighter">Nuestra <span className="text-isip-cyan">Misión</span></h3>
+              <div className="mb-6">
+                <h3 className="text-4xl font-black text-white uppercase tracking-tighter mb-4 leading-none">
+                  Nuestra <span className="text-isip-cyan">Misión</span>
+                </h3>
+                <div className="w-16 h-1 bg-isip-cyan mb-6 mx-auto"></div>
               </div>
-              <p className="text-white/70 text-xl font-light leading-relaxed">
+              <p className="text-white/80 text-lg font-light leading-relaxed">
                 Optimizar los procesos productivos de nuestros clientes mediante la aplicación de conocimiento químico especializado, transformando problemas técnicos en oportunidades de eficiencia y rentabilidad.
               </p>
-              <div className="mt-12 w-20 h-1 bg-isip-cyan/30 group-hover:w-full transition-all duration-700"></div>
             </motion.div>
 
             {/* Visión */}
             <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="bg-isip-dark/80 backdrop-blur-xl p-12 md:p-20 rounded-[60px] border border-white/10 shadow-2xl group hover:border-isip-cyan/30 transition-all duration-500"
+              className="text-center max-w-xl mx-auto"
             >
-              <div className="flex items-center space-x-6 mb-10">
-                <div className="w-16 h-16 bg-isip-cyan/20 rounded-2xl flex items-center justify-center text-isip-cyan">
-                  <Users size={36} />
-                </div>
-                <h3 className="text-4xl font-black text-white uppercase tracking-tighter">Nuestra <span className="text-isip-cyan">Visión</span></h3>
+              <div className="mb-6">
+                <h3 className="text-4xl font-black text-white uppercase tracking-tighter mb-4 leading-none">
+                  Nuestra <span className="text-isip-cyan">Visión</span>
+                </h3>
+                <div className="w-16 h-1 bg-isip-cyan mb-6 mx-auto"></div>
               </div>
-              <p className="text-white/70 text-xl font-light leading-relaxed">
+              <p className="text-white/80 text-lg font-light leading-relaxed">
                 Ser reconocidos como el socio estratégico líder en soluciones químicas integrales para la industria peruana, destacando por nuestra capacidad de innovación y respuesta técnica personalizada.
               </p>
-              <div className="mt-12 w-20 h-1 bg-isip-cyan/30 group-hover:w-full transition-all duration-700"></div>
             </motion.div>
           </div>
         </div>

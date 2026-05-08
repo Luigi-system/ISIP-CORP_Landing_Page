@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { ArrowUp, Globe, Info, Mail } from 'lucide-react';
+import footerLogo from '../assets/footer.png';
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -11,7 +12,10 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           <div className="space-y-6">
-            <h4 className="text-2xl font-bold">ISIP<span className="text-isip-cyan">.</span></h4>
+            <div className="flex items-center space-x-3">
+              <img src={footerLogo} alt="ISIP Logo" className="h-10 w-auto" />
+              <h4 className="text-2xl font-bold">ISIP</h4>
+            </div>
             <p className="text-gray-400 leading-relaxed">
               Soluciones integrales en química especializada para la industria peruana. Calidad, innovación y compromiso.
             </p>
@@ -35,22 +39,24 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="text-lg font-bold mb-6">Nuestros Sectores</h4>
+            <h4 className="text-lg font-bold mb-6">Nuestras Unidades</h4>
             <ul className="space-y-4 text-gray-400">
-              <li><a href="#" className="hover:text-isip-cyan transition-colors">Minería</a></li>
-              <li><a href="#" className="hover:text-isip-cyan transition-colors">Papel y Pulpa</a></li>
-              <li><a href="#" className="hover:text-isip-cyan transition-colors">Construcción</a></li>
-              <li><a href="#" className="hover:text-isip-cyan transition-colors">Tratamiento de Agua</a></li>
+              <li><Link to="/unidades#mineria" className="hover:text-isip-cyan transition-colors">Minería</Link></li>
+              <li><Link to="/unidades#papel-pulpa" className="hover:text-isip-cyan transition-colors">Papel y Pulpa</Link></li>
+              <li><Link to="/unidades#construccion" className="hover:text-isip-cyan transition-colors">Construcción</Link></li>
+              <li><Link to="/unidades#tratamiento-agua" className="hover:text-isip-cyan transition-colors">Tratamiento de Agua</Link></li>
+              <li><Link to="/unidades#gas-petroleo" className="hover:text-isip-cyan transition-colors">Gas y Petróleo</Link></li>
+              <li><Link to="/unidades#industria-alimentaria" className="hover:text-isip-cyan transition-colors">Industria Alimentaria</Link></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="text-lg font-bold mb-6">Suscripción</h4>
-            <p className="text-gray-400 mb-6">Reciba nuestras últimas novedades y boletines técnicos.</p>
+            <h4 className="text-lg font-bold mb-6">Contacto</h4>
+            <p className="text-gray-400 mb-6">Déjanos tu correo y en breve nos pondremos en contacto contigo.</p>
             <div className="flex">
               <input type="email" className="bg-white/5 border border-white/10 px-4 py-3 rounded-l-xl w-full outline-none focus:border-isip-cyan transition-colors" placeholder="Su correo" />
               <button className="bg-isip-cyan px-4 py-3 rounded-r-xl hover:bg-isip-cyan/90 transition-colors">
-                Unirse
+                Enviar
               </button>
             </div>
           </div>

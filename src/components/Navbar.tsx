@@ -31,7 +31,7 @@ const Navbar = () => {
           <Link to="/" className="flex-shrink-0 flex items-center space-x-3">
             <img src={logo} alt="ISIP Logo" className="h-10 w-auto" />
             <span className="text-3xl font-bold text-white tracking-tighter leading-none">
-              ISIP<span className="text-isip-cyan">.</span>
+              ISIP
             </span>
           </Link>
 
