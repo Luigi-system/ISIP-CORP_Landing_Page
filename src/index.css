@@ -1,13 +1,19 @@
 @import "tailwindcss";
 
 @theme {
-  --color-isip-dark: #00497c;
-  --color-isip-cyan: #0c9bc1;
-  --color-isip-light: #F4F7F9;
-  --color-isip-accent: #E30613;
-  
+  --color-isip-dark: #2B388F;
+  --color-isip-blue: #1B5BA7;
+  --color-isip-real: #1C75BC;
+  --color-isip-cyan: #0093D1;
+  --color-isip-light: #FFFFFF;
+  --color-isip-accent: #1C75BC;
+
   --font-sans: "Montserrat", "Inter", sans-serif;
+  
+  --shadow-phone-outer: 0 -20px 40px rgba(0, 0, 0, 0.5);
+  --shadow-phone-inner: inset 0 10px 10px rgba(255, 255, 255, 0.05);
 }
+
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -20,11 +26,17 @@
     height: 100%;
   }
 
-  section, #home {
-    min-height: 100vh;
+  section,
+  #home {
+    min-height: auto;
   }
-    
-  h1, h2, h3, h4, h5, h6 {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-bold;
   }
 }
@@ -36,31 +48,86 @@
 
 /* Hide scrollbar for IE, Edge and Firefox */
 * {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 @layer components {
   .glass-card {
     @apply bg-white/10 backdrop-blur-md border border-white/20 rounded-xl;
   }
-  
+
   .btn-primary {
-    @apply bg-isip-cyan hover:bg-isip-cyan/90 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 active:scale-95;
+    @apply bg-isip-cyan hover:bg-isip-cyan/90 text-white px-5 py-2.5 rounded-md font-semibold transition-all duration-300 transform hover:scale-[1.02] active:scale-95 text-sm;
   }
-  
+
   .btn-outline {
-    @apply border-2 border-isip-cyan text-isip-cyan hover:bg-isip-cyan hover:text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300;
+    @apply border-2 border-isip-cyan text-isip-cyan hover:bg-isip-cyan hover:text-white px-5 py-2.5 rounded-md font-semibold transition-all duration-300 text-sm;
+  }
+
+  /* Phone Frame Styles */
+  .phone-frame {
+    @apply relative bg-[#0a0a0a] border-x-[6px] border-t-[6px] border-[#1a1a1a] rounded-t-[3rem] rounded-b-none overflow-hidden;
+    box-shadow: var(--shadow-phone-outer), var(--shadow-phone-inner);
+    width: 100%;
+    height: 100%;
+    max-width: 420px;
+    max-height: 850px;
+  }
+
+  .phone-screen {
+    @apply relative w-full h-full bg-isip-dark overflow-hidden flex flex-col;
+    border-radius: calc(3rem - 6px) calc(3rem - 6px) 0 0;
+  }
+
+  .phone-island {
+    @apply absolute top-4 left-1/2 -translate-x-1/2 w-24 h-6 bg-black rounded-full z-50 flex items-center justify-center space-x-1.5;
+  }
+
+  .phone-island-camera {
+    @apply w-2 h-2 rounded-full bg-[#1a1a1a] border border-white/5;
+  }
+
+  .phone-btn-left {
+    @apply absolute -left-[8px] top-24 w-[2px] h-12 bg-[#2a2a2a] rounded-l-md;
+  }
+
+  .phone-btn-left-vol {
+    @apply absolute -left-[8px] top-40 w-[2px] h-20 bg-[#2a2a2a] rounded-l-md flex flex-col justify-between py-2;
+  }
+
+  .phone-btn-right {
+    @apply absolute -right-[8px] top-32 w-[2px] h-20 bg-[#2a2a2a] rounded-r-md;
+  }
+
+  .phone-bottom-line {
+    @apply absolute bottom-2 left-1/2 -translate-x-1/2 w-32 h-1 bg-white/20 rounded-full z-50;
   }
 }
 
 
 
 @keyframes slow-zoom {
-  0% { transform: scale(1.0); }
-  100% { transform: scale(1.1); }
+  0% {
+    transform: scale(1.0);
+  }
+
+  100% {
+    transform: scale(1.1);
+  }
 }
 
 .animate-slow-zoom {
   animation: slow-zoom 20s ease-in-out infinite alternate;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

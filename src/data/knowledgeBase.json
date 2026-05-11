@@ -1,0 +1,66 @@
+{
+  "company": {
+    "name": "ISIP - Integral Solutions for Industrial Processes S.A.C.",
+    "shortName": "ISIP CORP",
+    "description": "Empresa peruana especializada en el desarrollo, fabricación y comercialización de productos químicos de alto desempeño para la industria.",
+    "mission": "Optimizar los procesos productivos de nuestros clientes mediante la aplicación de conocimiento químico especializado, transformando problemas técnicos en oportunidades de eficiencia y rentabilidad.",
+    "vision": "Ser reconocidos como el socio estratégico líder en soluciones químicas integrales para la industria peruana, destacando por nuestra capacidad de innovación y respuesta técnica personalizada.",
+    "pillars": [
+      "Innovación Tecnológica",
+      "Compromiso Técnico",
+      "Calidad Certificada"
+    ]
+  },
+  "contact": {
+    "email": "contacto@isipcorp.com.pe",
+    "whatsapp": "+51 982 268 533",
+    "whatsappLink": "https://api.whatsapp.com/send/?phone=51982268533",
+    "linkedin": "https://www.linkedin.com/company/integral-solutions-for-industrial-processes/",
+    "address": "Lima, Perú"
+  },
+  "services": [
+    {
+      "id": "mineria",
+      "title": "Minería",
+      "description": "Soluciones para optimizar la recuperación de minerales y garantizar la estabilidad operativa.",
+      "keywords": ["flotación", "reactivos", "espumantes", "floculantes"]
+    },
+    {
+      "id": "papel",
+      "title": "Papel y Pulpa",
+      "description": "Control microbiológico, retención, drenaje y blanqueamiento para la industria papelera.",
+      "keywords": ["celulosa", "microbiológico", "retención", "caldera"]
+    },
+    {
+      "id": "agua",
+      "title": "Tratamiento de Agua",
+      "description": "Maximización de eficiencia y reúso sostenible del recurso hídrico industrial.",
+      "keywords": ["corrosión", "incrustaciones", "clarificación", "residual"]
+    },
+    {
+      "id": "construccion",
+      "title": "Construcción",
+      "description": "Aditivos para mejorar rendimiento de materiales y durabilidad en obra.",
+      "keywords": ["aditivos", "concreto", "resistencia"]
+    },
+    {
+      "id": "gas-petroleo",
+      "title": "Gas y Petróleo",
+      "description": "Productos para extracción, refinación y control de corrosión en procesos críticos.",
+      "keywords": ["refinación", "petróleo", "inhibidores"]
+    },
+    {
+      "id": "alimentos",
+      "title": "Industria Alimentaria",
+      "description": "Tratamientos para calidad de agua y sistemas de vapor en entornos alimentarios.",
+      "keywords": ["vapor", "inocuidad", "limpieza"]
+    }
+  ],
+  "responseFormat": {
+    "widgets": {
+      "contact_email": "Muestra un widget con el correo electrónico",
+      "contact_whatsapp": "Muestra un botón de WhatsApp",
+      "service_card": "Muestra una tarjeta de servicio con enlace"
+    }
+  }
+}

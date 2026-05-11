@@ -8,10 +8,11 @@ export default {
     extend: {
       colors: {
         isip: {
-          dark: '#00497c',
-          cyan: '#0c9bc1',
+          dark: '#1E3A8A',
+          blue: '#2563EB',
+          cyan: '#3B82F6',
           light: '#F4F7F9',
-          accent: '#E30613', // Standard industrial red for accents
+          accent: '#1D4ED8',
         }
       },
       fontFamily: {
